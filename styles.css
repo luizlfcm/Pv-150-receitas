@@ -38,8 +38,7 @@ h1, h2, .lead { font-family: var(--serif); font-optical-sizing: none; font-varia
 /* ---------- marca ---------- */
 .topo { padding: max(20px, env(safe-area-inset-top)) 24px 0; display: flex; justify-content: center; }
 .marca { display: inline-flex; align-items: center; text-decoration: none; color: var(--creme); }
-.marca__nome { font-weight: 700; letter-spacing: .2em; font-size: 1.02rem; }
-.marca__sub { margin-left: 12px; padding-left: 12px; border-left: 1px solid var(--ouro); font-size: .88rem; letter-spacing: .02em; color: rgba(246,240,227,.85); line-height: 1.2; }
+.marca__logo { display: block; width: clamp(132px, 38vw, 168px); height: auto; }
 
 /* ---------- primeira dobra ---------- */
 .hero {
