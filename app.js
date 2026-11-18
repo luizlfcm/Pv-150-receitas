@@ -74,4 +74,19 @@
     botoes[i].setAttribute("href", link);
     botoes[i].addEventListener("click", aoClicar);
   }
+
+  // Botão flutuante: aparece só depois que o botão principal já passou (saiu pelo topo da tela).
+  try {
+    var principal = document.querySelector(".hero .btn"), flut = document.getElementById("flutuante");
+    if (principal && flut && "IntersectionObserver" in window) {
+      var fl = flut.querySelector("a");
+      new IntersectionObserver(function (es) {
+        var e = es[es.length - 1];
+        var mostrar = !e.isIntersecting && e.boundingClientRect.top < 0;
+        flut.classList.toggle("is-on", mostrar);
+        flut.setAttribute("aria-hidden", mostrar ? "false" : "true");
+        if (fl) { if (mostrar) fl.removeAttribute("tabindex"); else fl.setAttribute("tabindex", "-1"); }
+      }, { threshold: 0 }).observe(principal);
+    }
+  } catch (e) {}
 })();
