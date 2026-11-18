@@ -47,7 +47,7 @@ h1 { margin: 0; font-weight: 700; font-size: clamp(2.7rem, 13vw, 5.2rem); line-h
 .lead { margin: 12px 0 0; font-weight: 500; font-size: clamp(1.2rem, 5.2vw, 1.55rem); line-height: 1.3; letter-spacing: -.005em; color: var(--ouro-claro); }
 
 /* A capa se ajusta à altura visível da tela (svh = com a barra do navegador), para o botão caber na primeira dobra */
-.capa { margin: 20px 0 0; height: clamp(190px, calc(100svh - 334px), 350px); aspect-ratio: 536 / 762; position: relative; }
+.capa { margin: 20px 0 0; height: clamp(190px, calc(100svh - 358px), 350px); aspect-ratio: 536 / 762; position: relative; }
 .capa img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; box-shadow: 0 30px 50px -16px rgba(0,0,0,.65), 0 0 0 1px rgba(240,217,160,.35), 0 0 60px rgba(212,174,102,.25); }
 
 .cta { width: 100%; max-width: 440px; margin-top: 24px; }
@@ -63,8 +63,10 @@ h1 { margin: 0; font-weight: 700; font-size: clamp(2.7rem, 13vw, 5.2rem); line-h
 .btn:active { transform: translateY(1px); }
 .btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 .btn svg { flex: none; }
-.redireciona { margin: 14px 0 0; font-size: 1.05rem; line-height: 1.4; color: var(--creme); }
-.preco { margin: 8px 0 0; font-size: .95rem; color: rgba(246,240,227,.72); }
+.redireciona { margin: 14px 0 0; font-size: 1.02rem; line-height: 1.4; color: rgba(246,240,227,.9); }
+.redireciona strong { display: block; color: #fff; font-weight: 700; font-size: 1.08rem; }
+.redireciona span { display: block; }
+.preco { margin: 6px 0 0; font-size: .95rem; color: rgba(246,240,227,.72); }
 .preco strong { color: #fff; font-weight: 700; }
 
 @media (max-height: 700px) and (max-width: 899px) {
