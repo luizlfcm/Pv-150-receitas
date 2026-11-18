@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pulso Saúde em Movimento | 150 Almoços Fitness</title>
 <meta name="description" content="Bem-vindo à Pulso. Conheça o 150 Almoços Fitness: receitas práticas, econômicas e equilibradas para variar o cardápio sem complicação.">
-<meta name="theme-color" content="#163F33">
+<meta name="theme-color" content="#0e2b22">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Bem-vindo à Pulso | 150 Almoços Fitness">
 <meta property="og:description" content="150 receitas práticas, econômicas e equilibradas. A partir de R$ 14,99.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/playfair-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/img/capa.webp" as="image" type="image/webp">
+<link rel="preload" href="/fonts/bodoni-moda-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/img/hero.webp" as="image" type="image/webp">
 <link rel="stylesheet" href="/styles.css">
 
 <!-- Configuração da página: tudo que muda fica aqui, em um lugar só. -->
@@ -38,58 +38,64 @@ fbq('track', 'ViewContent', { content_name: '150 Almoços Fitness', content_cate
 </head>
 <body>
 
-<header class="topo">
-  <a class="marca" href="/" aria-label="Pulso, Saúde em Movimento">
-    <span class="marca__nome">PULSO</span>
-    <span class="marca__linha" aria-hidden="true"></span>
-    <span class="marca__sub">Saúde em Movimento</span>
-  </a>
-</header>
-
 <main>
   <section class="hero">
-    <div class="hero__texto">
-      <p class="eyebrow">Bem-vindo à Pulso</p>
-      <h1>É um prazer <em>ter você aqui.</em></h1>
-      <p class="sub">Conheça o <strong>150 Almoços Fitness</strong>: receitas práticas, econômicas e equilibradas para variar o cardápio sem complicação.</p>
+    <div class="hero__midia">
+      <img class="hero__foto" src="/img/hero.webp" width="1024" height="1536" alt="Isabella Bianchi, nutricionista, sentada à mesa de trabalho" fetchpriority="high">
+      <div class="hero__veu" aria-hidden="true"></div>
     </div>
 
-    <figure class="capa">
-      <img src="/img/capa.webp" width="536" height="762" alt="Capa do guia 150 Almoços Fitness, de Isabella Bianchi">
-    </figure>
-
-    <div class="cta">
-      <p class="preco">A partir de <strong>R$&nbsp;14,99</strong> <span aria-hidden="true">·</span> Pix <span aria-hidden="true">·</span> garantia de 7 dias</p>
-      <a class="btn" data-wa href="https://wa.me/5521988784380" rel="noopener">
-        <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.38 4 15.01c0 2.12.55 4.19 1.6 6.01L4 29l8.14-1.56a12.03 12.03 0 0 0 3.9.65h.01C22.69 28.09 28 22.71 28 16.08 28 9.45 22.69 3 16.04 3Zm0 22.07h-.01a10 10 0 0 1-5.1-1.4l-.37-.22-4.83.93.97-4.7-.24-.38a9.95 9.95 0 0 1-1.54-5.3c0-5.5 4.5-9.98 10.04-9.98 5.52 0 10.02 4.47 10.02 9.98 0 5.5-4.5 9.07-8.94 9.07Zm5.5-7.46c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.17.2-.35.23-.65.08-.3-.15-1.27-.47-2.42-1.5a9.1 9.1 0 0 1-1.68-2.09c-.18-.3-.02-.46.13-.6.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.25-.58-.5-.5-.68-.51l-.58-.01c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.1 3.2 5.1 4.5.71.3 1.27.5 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.78-.72 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35Z"/></svg>
-        <span>Quero receber no WhatsApp 🥗</span>
+    <header class="topo">
+      <a class="marca" href="/" aria-label="Pulso, Saúde em Movimento">
+        <span class="marca__nome">PULSO</span>
+        <span class="marca__sub">Saúde em Movimento</span>
       </a>
-      <p class="mini">Atendimento pelo WhatsApp, do pedido à entrega.</p>
+    </header>
+
+    <div class="hero__conteudo">
+      <h1><span>Bem-vindo</span> <span>à Pulso.</span></h1>
+      <p class="lead">É um prazer ter você aqui.</p>
+
+      <div class="guia">
+        <p class="guia__texto">Conheça o <strong>150 Almoços Fitness</strong>: receitas práticas, econômicas e equilibradas para variar o cardápio sem complicação.</p>
+        <img class="guia__capa" src="/img/capa.webp" width="536" height="762" alt="Capa do guia 150 Almoços Fitness, de Isabella Bianchi">
+      </div>
+
+      <div class="cta">
+        <a class="btn" data-wa href="https://wa.me/5521988784380" rel="noopener">
+          <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.38 4 15.01c0 2.12.55 4.19 1.6 6.01L4 29l8.14-1.56a12.03 12.03 0 0 0 3.9.65h.01C22.69 28.09 28 22.71 28 16.08 28 9.45 22.69 3 16.04 3Zm0 22.07h-.01a10 10 0 0 1-5.1-1.4l-.37-.22-4.83.93.97-4.7-.24-.38a9.95 9.95 0 0 1-1.54-5.3c0-5.5 4.5-9.98 10.04-9.98 5.52 0 10.02 4.47 10.02 9.98 0 5.5-4.5 9.07-8.94 9.07Zm5.5-7.46c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.17.2-.35.23-.65.08-.3-.15-1.27-.47-2.42-1.5a9.1 9.1 0 0 1-1.68-2.09c-.18-.3-.02-.46.13-.6.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.25-.58-.5-.5-.68-.51l-.58-.01c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.1 3.2 5.1 4.5.71.3 1.27.5 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.78-.72 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35Z"/></svg>
+          <span>Quero receber no WhatsApp 🥗</span>
+        </a>
+        <p class="preco">A partir de <strong>R$&nbsp;14,99</strong>, no Pix, com garantia de 7 dias.</p>
+      </div>
     </div>
   </section>
 
   <section class="quem" id="quem-somos">
     <div class="quem__miolo">
-      <p class="quem__eyebrow">Quem somos</p>
+      <h2>Quem somos</h2>
       <div class="pessoas">
-        <figure class="pessoa">
-          <img src="/img/isabella.webp" width="400" height="500" loading="lazy" alt="Isabella Bianchi">
+        <figure class="pessoa pessoa--a">
+          <img src="/img/isabella.webp" width="640" height="800" loading="lazy" alt="Isabella Bianchi">
           <figcaption><strong>Isabella Bianchi</strong><span>Nutricionista</span></figcaption>
         </figure>
-        <figure class="pessoa">
-          <img src="/img/luiz.webp" width="400" height="500" loading="lazy" alt="Luiz Miranda">
+        <figure class="pessoa pessoa--b">
+          <img src="/img/luiz.webp" width="640" height="800" loading="lazy" alt="Luiz Miranda">
           <figcaption><strong>Luiz Miranda</strong><span>Treinador esportivo</span></figcaption>
         </figure>
       </div>
-      <p class="quem__texto">Casados e parceiros de vida, criamos juntos a <strong>PULSO – Saúde em Movimento</strong>. Nossa missão é tornar a saúde e o bem-estar acessíveis a todos, com orientação profissional e soluções práticas por um preço justo. 💙</p>
-      <blockquote>Cuidar da saúde não deve ser um privilégio, mas uma oportunidade para todos.</blockquote>
+      <div class="quem__texto">
+        <p class="frase">Cuidar da saúde não deve ser um privilégio, mas uma oportunidade para todos.</p>
+        <p>Casados e parceiros de vida, criamos juntos a <strong>PULSO – Saúde em Movimento</strong>. Nossa missão é tornar a saúde e o bem-estar acessíveis a todos, com orientação profissional e soluções práticas por um preço justo. 💙</p>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="rodape">
   <p><strong>Pulso Saúde em Movimento</strong></p>
-  <p>53.168.292 LUIZ FELIPE CORREA MIRANDA - ME · CNPJ 53.168.292/0001-32</p>
+  <p>53.168.292 LUIZ FELIPE CORREA MIRANDA - ME</p>
+  <p>CNPJ 53.168.292/0001-32</p>
   <p><a href="/privacidade">Política de privacidade</a></p>
 </footer>
 
