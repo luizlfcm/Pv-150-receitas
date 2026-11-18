@@ -67,7 +67,34 @@
       }
     } catch (e) {}
     enviarCodigo();
+    mostrarAbrindo();
   }
+
+  // Tela "Abrindo o seu WhatsApp…": dá retorno imediato ao clique. Se o app não abrir em ~4 s, mostra o plano B.
+  var abrindo = document.getElementById("abrindo"), plano = document.getElementById("abrindo-plano"),
+      linkB = document.getElementById("abrindo-link"), voltar = document.getElementById("abrindo-voltar"), timerB = null;
+  if (linkB) linkB.setAttribute("href", link);
+  function esconderAbrindo() {
+    if (!abrindo) return;
+    clearTimeout(timerB);
+    abrindo.classList.remove("is-on"); abrindo.hidden = true;
+    if (plano) plano.hidden = true;
+    document.documentElement.style.overflow = "";
+  }
+  function mostrarAbrindo() {
+    try {
+      if (!abrindo) return;
+      abrindo.hidden = false;
+      document.documentElement.style.overflow = "hidden";
+      window.requestAnimationFrame(function () { abrindo.classList.add("is-on"); });
+      clearTimeout(timerB);
+      timerB = setTimeout(function () { if (plano) plano.hidden = false; }, 4000);
+    } catch (e) {}
+  }
+  if (voltar) voltar.addEventListener("click", esconderAbrindo);
+  // Quando a pessoa volta do WhatsApp para o navegador, a página aparece como estava.
+  document.addEventListener("visibilitychange", function () { if (document.visibilityState === "visible") esconderAbrindo(); });
+  window.addEventListener("pageshow", function (e) { if (e.persisted) esconderAbrindo(); });
 
   var botoes = document.querySelectorAll("[data-wa]");
   for (var i = 0; i < botoes.length; i++) {
