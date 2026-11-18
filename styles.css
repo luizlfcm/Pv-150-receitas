@@ -69,7 +69,8 @@ h1 { margin: 0; font-weight: 700; font-size: clamp(2.9rem, 14vw, 5.6rem); line-h
 .btn:active { transform: translateY(1px); }
 .btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 .btn svg { flex: none; }
-.preco { margin: 16px 0 0; font-size: 1.05rem; color: var(--creme); }
+.redireciona { margin: 16px 0 0; font-size: 1.05rem; line-height: 1.4; color: var(--creme); }
+.preco { margin: 8px 0 0; font-size: .95rem; color: rgba(246,240,227,.72); }
 .preco strong { color: #fff; font-weight: 700; }
 
 @keyframes brilho {
