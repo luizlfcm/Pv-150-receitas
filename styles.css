@@ -41,15 +41,16 @@ h1, h2, .lead { font-family: var(--sans); }
     radial-gradient(70% 38% at 50% 50%, rgba(212,174,102,.22), transparent 70%),
     radial-gradient(120% 60% at 50% 55%, var(--verde-vivo) 0%, var(--verde) 45%, var(--noite) 100%);
 }
-.hero__miolo { max-width: 1120px; margin: 0 auto; padding: 28px 24px 48px; display: flex; flex-direction: column; align-items: center; }
+.hero__miolo { max-width: 1120px; margin: 0 auto; padding: max(26px, env(safe-area-inset-top)) 24px 44px; display: flex; flex-direction: column; align-items: center; }
 
 h1 { margin: 0; font-weight: 700; font-size: clamp(2.7rem, 13vw, 5.2rem); line-height: 1.02; letter-spacing: -.035em; color: #fff; text-wrap: balance; }
-.lead { margin: 16px 0 0; font-weight: 500; font-size: clamp(1.2rem, 5.2vw, 1.55rem); line-height: 1.3; letter-spacing: -.005em; color: var(--ouro-claro); }
+.lead { margin: 12px 0 0; font-weight: 500; font-size: clamp(1.2rem, 5.2vw, 1.55rem); line-height: 1.3; letter-spacing: -.005em; color: var(--ouro-claro); }
 
-.capa { margin: 30px 0 0; width: min(60vw, 240px); position: relative; }
-.capa img { width: 100%; border-radius: 6px; box-shadow: 0 30px 50px -16px rgba(0,0,0,.65), 0 0 0 1px rgba(240,217,160,.35), 0 0 60px rgba(212,174,102,.25); }
+/* A capa se ajusta à altura visível da tela (svh = com a barra do navegador), para o botão caber na primeira dobra */
+.capa { margin: 20px 0 0; height: clamp(190px, calc(100svh - 334px), 350px); aspect-ratio: 536 / 762; position: relative; }
+.capa img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; box-shadow: 0 30px 50px -16px rgba(0,0,0,.65), 0 0 0 1px rgba(240,217,160,.35), 0 0 60px rgba(212,174,102,.25); }
 
-.cta { width: 100%; max-width: 440px; margin-top: 34px; }
+.cta { width: 100%; max-width: 440px; margin-top: 24px; }
 .btn {
   display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; min-height: 64px; padding: 16px 14px; white-space: nowrap;
   background: linear-gradient(180deg, #f0d296, var(--ouro)); color: var(--noite); text-decoration: none;
@@ -62,9 +63,14 @@ h1 { margin: 0; font-weight: 700; font-size: clamp(2.7rem, 13vw, 5.2rem); line-h
 .btn:active { transform: translateY(1px); }
 .btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 .btn svg { flex: none; }
-.redireciona { margin: 16px 0 0; font-size: 1.05rem; line-height: 1.4; color: var(--creme); }
+.redireciona { margin: 14px 0 0; font-size: 1.05rem; line-height: 1.4; color: var(--creme); }
 .preco { margin: 8px 0 0; font-size: .95rem; color: rgba(246,240,227,.72); }
 .preco strong { color: #fff; font-weight: 700; }
+
+@media (max-height: 700px) and (max-width: 899px) {
+  h1 { font-size: clamp(2.3rem, 11.4vw, 3.4rem); }
+  .btn { min-height: 58px; padding: 12px 14px; }
+}
 
 @keyframes brilho {
   0%, 100% { box-shadow: 0 16px 34px -10px rgba(212,174,102,.6), inset 0 1px 0 rgba(255,255,255,.55), 0 0 0 0 rgba(240,210,150,0); }
@@ -104,7 +110,8 @@ h2 { margin: 0 0 28px; font-weight: 700; font-size: clamp(2.1rem, 9vw, 3rem); li
   .hero__texto { grid-area: texto; align-self: end; }
   h1 { font-size: clamp(4rem, 6.4vw, 6rem); }
   .lead { font-size: 1.7rem; }
-  .capa { grid-area: capa; justify-self: center; margin: 0; width: min(100%, 330px); }
+  .capa { grid-area: capa; justify-self: center; margin: 0; width: min(100%, 330px); height: auto; }
+  .capa img { height: auto; }
   .cta { grid-area: cta; align-self: start; margin-top: 40px; }
   .quem__miolo { padding: 96px 40px 104px; }
   .pessoas { gap: 24px; max-width: 540px; }
