@@ -89,6 +89,9 @@ h2 { margin: 0 0 28px; font-weight: 700; font-size: clamp(2.1rem, 9vw, 3rem); li
 .rodape p { margin: 0 0 4px; }
 .rodape strong { color: var(--creme); font-weight: 650; }
 .rodape a { color: var(--ouro-claro); text-underline-offset: 3px; }
+.rodape__ig { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; text-decoration: none; color: var(--creme); font-weight: 500; }
+.rodape__ig:hover span, .rodape__ig:focus-visible span { text-decoration: underline; text-underline-offset: 3px; }
+.rodape__ig svg { color: var(--ouro-claro); flex: none; }
 
 /* ---------- telas maiores ---------- */
 @media (min-width: 900px) {
