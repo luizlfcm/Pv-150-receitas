@@ -30,7 +30,7 @@
   }
 
   // Monta o link do WhatsApp já com a mensagem e o código no final.
-  var texto = (C.mensagem || "Oi! Quero conhecer as 150 receitas fitness") + " (ref " + code + ")";
+  var texto = (C.mensagem || "Oi! Quero meu guia das 150 receitas fitness") + " (ref " + code + ")";
   var link = "https://wa.me/" + (C.whatsapp || "") + "?text=" + encodeURIComponent(texto);
 
   function enviarCodigo() {
