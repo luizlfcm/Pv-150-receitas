@@ -1,6 +1,6 @@
 # PV 150 Almoços Fitness — Pulso Saúde em Movimento
 
-Página de boas-vindas (estática, sem build) que serve de destino dos anúncios de **Vendas** e leva ao WhatsApp da vendedora com um **código de referência**. **É o modelo padrão de PV para todos os funis de WhatsApp do Luiz** (visão geral do sistema em `docs/MODELO-PV-CAPI.md` do repositório do funil, `luizlfcm/funil-x1-whatsapp`).
+Página de boas-vindas (estática, sem build) que serve de destino dos anúncios (campanha de **Leads** na fase 1 e de **Vendas** na fase 2) e leva ao WhatsApp da vendedora com um **código de referência**. **É o modelo padrão de PV para todos os funis de WhatsApp do Luiz** (visão geral do sistema em `docs/MODELO-PV-CAPI.md` do repositório do funil, `luizlfcm/funil-x1-whatsapp`).
 
 - `index.html` — a página. O bloco `window.PULSO` no topo concentra a configuração: ID do pixel, número do WhatsApp, mensagem pronta e `refEndpoint` (webhook do n8n que guarda o código do clique; vazio = não envia).
 - `app.js` — gera o código curto (`ref XXXXX`), monta o link do WhatsApp e, no clique, dispara `Lead` e `Contact` do pixel (eventID `lead-<código>` / `contact-<código>`), envia código/fbp/fbc/UTM/ad_id ao `refEndpoint` e mostra a tela "Abrindo o seu WhatsApp…". Tudo é à prova de falha: se o pixel ou o endpoint não responderem, o botão continua abrindo o WhatsApp.
@@ -35,6 +35,6 @@ Não colocar tokens/segredos neste repositório. O token da API de Conversões f
 - Código de referência de 5 caracteres do alfabeto `ABCDEFGHJKLMNPQRSTUVWXYZ23456789` (sem 0/O/1/I); o funil só reconhece esse formato.
 
 ### O que o anúncio precisa levar
-O anúncio de Vendas aponta para esta página com **parâmetros de URL** (campo "Parâmetros de URL" da Meta):
+O anúncio aponta para esta página com **parâmetros de URL** (campo "Parâmetros de URL" da Meta):
 `utm_source=facebook&utm_medium=paid&utm_campaign={{campaign.name}}&ad_id={{ad.id}}&adset_id={{adset.id}}&campaign_id={{campaign.id}}&placement={{placement}}`.
 Sem `ad_id` o custo por anúncio não aparece no Dashboard; sem `fbclid` a Meta não liga a compra ao clique.
