@@ -1,6 +1,6 @@
 # PV 150 Almoços Fitness — Pulso Saúde em Movimento
 
-Página de boas-vindas (estática, sem build) que serve de destino dos anúncios (campanha de **Leads** na fase 1 e de **Vendas** na fase 2) e leva ao WhatsApp da vendedora com um **código de referência**. **É o modelo padrão de PV para todos os funis de WhatsApp do Luiz** (visão geral do sistema em `docs/MODELO-PV-CAPI.md` do repositório do funil, `luizlfcm/funil-x1-whatsapp`).
+Página de boas-vindas (estática, sem build) que serve de destino dos anúncios (campanha de **Vendas** com evento Compra) e leva ao WhatsApp da vendedora com um **código de referência**. **É o modelo padrão de PV para todos os funis de WhatsApp do Luiz** (visão geral do sistema em `docs/MODELO-PV-CAPI.md` do repositório do funil, `luizlfcm/funil-x1-whatsapp`).
 
 - `index.html` — a página. O bloco `window.PULSO` no topo concentra a configuração: ID do pixel, número do WhatsApp, mensagem pronta e `refEndpoint` (webhook do n8n que guarda o código do clique; vazio = não envia).
 - `app.js` — gera o código curto (`ref XXXXX`), monta o link do WhatsApp e, no clique, dispara `Lead` e `Contact` do pixel (eventID `lead-<código>` / `contact-<código>`), envia código/fbp/fbc/UTM/ad_id ao `refEndpoint` e mostra a tela "Abrindo o seu WhatsApp…". Tudo é à prova de falha: se o pixel ou o endpoint não responderem, o botão continua abrindo o WhatsApp.
